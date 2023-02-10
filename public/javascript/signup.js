@@ -1,7 +1,6 @@
-const { Json } = require("sequelize/types/utils");
-
 async function signupFormHandler(event) {
     event.preventDefault();
+
 
     const username = document.querySelector('#username-signup').value.trim();
     const email =document.querySelector('#email-signup').value.trim();
@@ -22,7 +21,8 @@ async function signupFormHandler(event) {
             console.log('success');
             document.location.replace('/dashboard');
 
-        } else {
+        } 
+        else {
             alert(response.statusText);
         }
     }

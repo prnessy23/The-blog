@@ -19,7 +19,7 @@ Following the MVC structure, this application allows users to publish their blog
 
 #### Usage
 _____
-The application will allow new users to the site to sign up and existing users to sign in. Once logged onto the site users will be able view, add, edit or delete their blog posts in their own dashboard. They will also have the ability to comment on other blog posts on the site. 
+The application will allow new users to the site to sign up and existing users to sign in. Once logged onto the site users will be able to view, add, edit or delete their blog posts in their own dashboard. They will also have the ability to comment on other blog posts on the site. 
 The site can be viewed here on [Heroku].
 
  

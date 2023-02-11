@@ -15,11 +15,11 @@ ____
 
 #### Description
 ___
-Following the MVC structure, this application allows users to publish their blog posts to the site and also comment on other users` blog posts. It uses Handlebars.js for the templating language,Sequelize as the Object-Relational-Mapping tool and the express-session npm package for authentication purposes. 
+Following the MVC structure, this application, designed for developers, allows a user to publish their blog posts to the site and also comment on other developers` blog posts. It uses Handlebars.js for the templating engine,Sequelize as the Object-Relational-Mapping tool and the express-session npm package for authentication purposes. 
 
 #### Usage
 _____
-The application will allow new users to the site to sign up and existing users to sign in. Once logged onto the site users will be able to view, add, edit or delete their blog posts in their own dashboard. They will also have the ability to comment on other blog posts on the site. 
+The application will allow new users to the site to sign up and existing users to sign in. Once logged onto the site users will be able to view, add, edit or delete their blog posts in their dashboard. They will also have the ability to comment on other developers` blog posts on the site. 
 The site can be viewed here on [Heroku].
 
  

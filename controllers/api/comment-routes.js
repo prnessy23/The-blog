@@ -2,6 +2,7 @@ const router =require('express').Router();
 const {Comment}= require('../../models');
 const withAuth = require('../../utils/auth');
 
+// function to get all comments
 router.get('/', (req,res) => {
     Comment.findAll({})
     .then(dbCommentData => res.json(dbCommentData))
@@ -10,6 +11,7 @@ router.get('/', (req,res) => {
         res.status(500).json(err);
     })
 });
+// ability to create new comments
 router.post('/', withAuth, (req, res) =>{
     
     if (req.session){

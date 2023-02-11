@@ -15,7 +15,7 @@ ____
 
 #### Description
 ___
-Following the MVC structure, this application, designed for developers, allows a user to publish their blog posts to the site and also comment on other developers` blog posts. It uses Handlebars.js for the templating engine,Sequelize as the Object-Relational-Mapping tool and the express-session npm package for authentication purposes. 
+Following the MVC structure, this application, designed for developers, allows a user to publish their blog posts to the site and also comment on other developers` blog posts. It uses Handlebars.js for the templating engine, Sequelize as the Object-Relational-Mapping tool and the express-session npm package for authentication purposes. 
 
 #### Usage
 _____

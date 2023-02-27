@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #BDBDBD;
-       --primary-hover: #212121;
+    --primary-color: black;
+       --primary-hover: lightgrey;
 }
 
 * {
@@ -13,7 +13,7 @@ body, html, input, textarea {
     padding: 0;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    color: #C0C0C0;
+    color: white;
 }
 
 a {

@@ -8,26 +8,13 @@ router.get('/', (req, res) => {
     console.log(req.ses);
 
     Post.findAll({
-        attributes: [
-            'id',
-            'post_text',
-            'title',
-            'created_at'
-        ],
-        include: [
-            {
-                model: Comment,
-                attributes: ['id, comment_text', 'post_id', 'user_id', 'created_at'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
-            },
-            {
-                model: User,
-                attributes: ['username']
-            }
-        ]
+        // attributes: [
+        //     'id',
+        //     'post_text',
+        //     'title',
+        //     'created_at'
+        // ],
+        include: [User]
     })
         .then(dbPostData => {
             // single post onto homepage
@@ -56,30 +43,30 @@ router.get('/signup', (req, res) => {
 
 
 // single-post page/one post
-router.get('/post/id', (req, res) => {
+router.get('/post/:id', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
         },
-        attributes: [
-            'id',
-            'post_text',
-            'title',
-            'created_at'
-        ],
+        // attributes: [
+        //     'id',
+        //     'post_text',
+        //     'title',
+        //     'created_at'
+        // ],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                // attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
-                    attributes: ['user_name']
+                    // attributes: ['user_name']
                 }
 
             },
             {
                 model: User,
-                attributes: ['username']
+                // attributes: ['username']
             }
         ]
     })

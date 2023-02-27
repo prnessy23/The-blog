@@ -1,14 +1,13 @@
-const {Model, DataTypes}= require('sequelize');
-const sequelize= require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 const bcryptjs = require('bcryptjs');
 const { beforeCreate } = require('./Comment');
 
 class User extends Model {
 
-    checkPassword(loginPW)
-{
-    return bcryptjs.compareSync(loginPW, this.password);
-} 
+    checkPassword(loginPW) {
+        return bcryptjs.compareSync(loginPW, this.password);
+    }
 }
 User.init(
     {
@@ -20,7 +19,7 @@ User.init(
         },
         username: {
             type: DataTypes.STRING,
-            allowNull:false
+            allowNull: false
         },
         email: {
             type: DataTypes.STRING,
@@ -40,23 +39,23 @@ User.init(
         }
     },
     {
-    hooks: {
-        async beforeCreate(newUserData) {
-            newUserData.password =await bcryptjs.hash(newUserData.password, 10);
-            return newUserData;
+        hooks: {
+            async beforeCreate(newUserData) {
+                newUserData.password = await bcryptjs.hash(newUserData.password, 10);
+                return newUserData;
+
+            },
+            async beforeUpdate(updatedUserData) {
+                updatedUserData.password = await bcryptjs.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            }
 
         },
-        async beforeUpdate(updatedUserData){
-            updatedUserData.password =await bcryptjs.hash(updatedUserData.password, 10);
-            return updatedUserData;
-        }
-
-    },
-    sequelize,
-    timestamps: false,
-    underscored: true,
-    modelName: 'user'
-}
+        sequelize,
+        timestamps: false,
+        underscored: true,
+        modelName: 'user'
+    }
 );
 
 module.exports = User;

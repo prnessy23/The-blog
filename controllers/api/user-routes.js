@@ -6,7 +6,7 @@ const withAuth =require("../../utils/auth");
 router.get('/', (req,res )=>{
 
     User.findAll({
-        attributes: { exclude: ['[password']}
+        // attributes: { exclude: ['[password']}
     })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -17,20 +17,20 @@ router.get('/', (req,res )=>{
 
 router.get('/:id', (req, res) => {
     User.findOne({
-        attributes: { exclude: ['password'] },
+        // attributes: { exclude: ['password'] },
         where: {
             id: req.params.id
         },
         include: [
             {model: Post,
-            attributes: ['id','title','post_text', 'created_at']
+            // attributes: ['id','title','post_text', 'created_at']
         },
         {
             model: Comment,
-            attributes: ['id','comment_text','created_at'],
+            // attributes: ['id','comment_text','created_at'],
             include: {
                 model:Post,
-                attributes:['title']
+                // attributes:['title']
             }
 
         }

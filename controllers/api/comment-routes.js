@@ -3,16 +3,16 @@ const {Comment}= require('../../models');
 const withAuth = require('../../utils/auth');
 
 // function to get all comments
-// router.get('/', (req,res) => {
-//     Comment.findAll({})
-//     .then(dbCommentData => res.json(dbCommentData))
-//     .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//     })
-// });
+router.get('/', (req,res) => {
+    Comment.findAll({})
+    .then(dbCommentData => res.json(dbCommentData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
 // ability to create new comments
-router.post('/', withAuth, (req, res) =>{
+router.post('/', (req, res) =>{
     
     if (req.session){
         Comment.create({

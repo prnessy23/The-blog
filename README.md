@@ -20,6 +20,19 @@ Following the MVC structure, this application, designed for developers, allows a
 #### Usage
 _____
 The application will allow new users to the site to sign up and existing users to sign in. Once logged onto the site users will be able to view, add, edit or delete their blog posts in their dashboard. They will also have the ability to comment on other developers` blog posts on the site. 
-The site can be viewed here on [Heroku].
+The site can be viewed here on [Heroku](#https://git.heroku.com/radiant-anchorage-03215.git)
+_______________________________________________
+
+#### Technologies Used
+- NodeJS
+- Javascript
+- MongoDB
+- Handlebars
+- MVC
+- Dotenv
+- MySQL
+  ________________________________________________
+  ##### Questions
+  Any questions can be directed to me at  [prnessy@gmail.com](#prnessy@gmail.com)
 
  
